@@ -25,10 +25,10 @@ namespace StringManipulation
             switch (Console.ReadLine())
             {
                 case "1":
-                    ReverseString();
+                    ReverseStringUI();
                     return true;
                 case "2":
-                    RemoveWhitespace();
+                    RemoveWhitespaceUI();
                     return true;
                 case "3":
                     return false;
@@ -43,22 +43,18 @@ namespace StringManipulation
             return Console.ReadLine();
         }
 
-        private static void ReverseString()
+        private static void ReverseStringUI()
         {
             Console.Clear();
             Console.WriteLine("Reverse String");
-
-            char[] charArray = CaptureInput().ToCharArray();
-            Array.Reverse(charArray);
-            DisplayResult(String.Concat(charArray));
+            DisplayResult(StringManipulator.ReverseString(CaptureInput()));
         }
 
-        private static void RemoveWhitespace()
+        private static void RemoveWhitespaceUI()
         {
             Console.Clear();
             Console.WriteLine("Remove Whitespace");
-
-            DisplayResult(CaptureInput().Replace(" ", ""));
+            DisplayResult(StringManipulator.RemoveWhitespace(CaptureInput()));
         }
 
         private static void DisplayResult(string message)
@@ -67,5 +63,21 @@ namespace StringManipulation
             Console.Write("\r\nPress Enter to return to Main Menu");
             Console.ReadLine();
         }
+    }
+
+    class StringManipulator
+    {
+        public static string ReverseString(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return String.Concat(charArray);
+        }
+
+        public static string RemoveWhitespace(string s)
+        {
+            return s.Replace(" ", "");
+        }
+
     }
 }
