@@ -65,7 +65,7 @@ namespace StringManipulation
         }
     }
 
-    class StringManipulator
+    public class StringManipulator
     {
         public static string ReverseString(string s)
         {
