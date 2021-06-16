@@ -7,7 +7,7 @@ It demonstrates the concept of unit testing and the refactoring necessary to hav
 It serves mostly as a personal learning experience.
 
 What I learnt so far:
--how to prepare for using git by placing a .gitignore file in the project directory from githun geared for C# specifically.
+-how to prepare for using git by placing a .gitignore file in the project directory from github geared for C# specifically.
 -how to git add files (to the staging area), commit them together with a message in a file using Atom.
 -how to set global config parameters like name and e-mail in git
 -how to amend a commit in case of a small error
