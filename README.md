@@ -16,7 +16,11 @@ What I learnt so far:
 -to refactor, separate the business logic from the controlling code and extract methods
 -it's possible to change the application from .NET Core to .NET Framework via the project options in VS:
 Generate a .NET Framework app, close VS and copy over the relevant data to your project, specifically App.config and Properties folder. Adjust the GUID in the solution (add the GUID in the globalsection for debug and release "Debug|Any CPU.ActiveCfg", etc) and adjust the TargetFrameworkVersion in the project file. Throw away bin and obj folders. If there are problems, then remove the project from the solution and then add it back.
--right click on base class and select 'create unit tests'. 
+-right click on base class and select 'create unit tests'.
+
+16-6-2021 
+-added unit tests for methods ReverseString and RemoveWhitespace and ran them in Test Explorer
+
 
 
 
